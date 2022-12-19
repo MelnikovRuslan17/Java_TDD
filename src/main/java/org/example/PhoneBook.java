@@ -12,7 +12,10 @@ public class PhoneBook {
 
     }
 
-    public String findByNumber(String number){
-        return null;
+    public String findByNumber(String phonenumbers){
+        return contacts.entrySet().stream()
+                .filter(x-> phonenumbers.equals(x.getValue()))
+                .findFirst().map(Map.Entry::getKey)
+                .orElse("Такого номера нет");
     }
 }

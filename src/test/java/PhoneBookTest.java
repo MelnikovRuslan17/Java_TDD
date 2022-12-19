@@ -38,7 +38,7 @@ public class PhoneBookTest {
         phoneBook.addContact("Ирина", "8-888-999-99");
         phoneBook.addContact("Олег", "8-888-000-07");
 
-        String phoneNumber = "8-888-00-07";
+        String phoneNumber = "8-888-000-07";
         String expected = "Олег";
         String result = phoneBook.findByNumber(phoneNumber);
         assertEquals(expected,result);
