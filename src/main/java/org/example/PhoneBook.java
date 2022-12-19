@@ -20,6 +20,6 @@ public class PhoneBook {
     }
 
     public String findByName(String name){
-        return null;
+        return contacts.containsKey(name)? contacts.get(name) : "Такого имени нет в телефонной книге";
     }
 }
