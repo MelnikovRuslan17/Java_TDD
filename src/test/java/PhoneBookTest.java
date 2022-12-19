@@ -4,6 +4,8 @@ import org.junit.jupiter.api.*;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class PhoneBookTest {
     PhoneBook phoneBook;
 
@@ -25,7 +27,7 @@ public class PhoneBookTest {
         int expected = 1;
         int result = phoneBook.addContact(name, phoneNumber);
 
-        assert(expected, result);
+        assertEquals (expected, result);
     }
 
 
