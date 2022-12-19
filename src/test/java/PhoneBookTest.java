@@ -60,15 +60,20 @@ public class PhoneBookTest {
     }
     @Test
     public void testPrintAllNames() {
-        Set<String> treeSet = phoneBook.printAllNames();
-        Object[] names = treeSet.toArray();
-        String expected1 = "Ангелина";
-        String expected2 = "Анна";
-        String expected3 = "Екатерина";
+        phoneBook.addContact("Анна", "8-888-888-77");
+        phoneBook.addContact("Ирина", "8-888-999-99");
+        phoneBook.addContact("Олег", "8-888-000-07");
 
-        assertEquals(names[1], expected1);
-        assertEquals(names[2], expected2);
-        assertEquals(names[3], expected3);
+        Set<String> treeSet = phoneBook.printAllNames();
+        Object [] names = treeSet.toArray();
+        String expected1 = "Анна";
+        String expected2 = "Ирина";
+        String expected3 = "Олег";
+
+        assertEquals(names[0], expected1);
+        assertEquals(names[1], expected2);
+        assertEquals(names[2], expected3);
+
     }
 }
 
