@@ -44,6 +44,19 @@ public class PhoneBookTest {
         assertEquals(expected,result);
 
     }
+    @Test
+    public void testFindByName(){
+        phoneBook.addContact("Анна", "8-888-888-77");
+        phoneBook.addContact("Ирина", "8-888-999-99");
+        phoneBook.addContact("Олег", "8-888-000-07");
+        phoneBook.addContact("Петро", "8-999-999-99");
+
+        String name = "Петро";
+        String expected = "8-999-999-99";
+        String result = phoneBook.findByName(name);
+        assertEquals(expected,result);
+
+    }
 
 }
 
