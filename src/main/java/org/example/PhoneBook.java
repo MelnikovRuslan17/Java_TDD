@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class PhoneBook {
     private Map<String, String> contacts = new HashMap<>();
@@ -21,5 +22,8 @@ public class PhoneBook {
 
     public String findByName(String name){
         return contacts.containsKey(name)? contacts.get(name) : "Такого имени нет в телефонной книге";
+    }
+    public Set<String> printAllNames(){
+        return null;
     }
 }

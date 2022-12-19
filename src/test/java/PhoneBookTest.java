@@ -3,6 +3,7 @@ import org.junit.jupiter.api.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -57,6 +58,17 @@ public class PhoneBookTest {
         assertEquals(expected,result);
 
     }
+    @Test
+    public void testPrintAllNames() {
+        Set<String> treeSet = phoneBook.printAllNames();
+        Object[] names = treeSet.toArray();
+        String expected1 = "Ангелина";
+        String expected2 = "Анна";
+        String expected3 = "Екатерина";
 
+        assertEquals(names[1], expected1);
+        assertEquals(names[2], expected2);
+        assertEquals(names[3], expected3);
+    }
 }
 
